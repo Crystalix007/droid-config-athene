@@ -7,6 +7,8 @@
 %define vendor_pretty Motorola
 %define device_pretty G4
 
+%define dcd_path ./
+
 # Community HW adaptations need this
 %define community_adaptation 1
 
@@ -15,7 +17,10 @@
 # For 4-5.5" device screen sizes of 16:9 ratio, use this formula (hold portrait):
 # pixel_ratio = 4.5/DiagonalDisplaySizeInches * HorizontalDisplayResolution/540
 # Other screen sizes and ratios will require more trial-and-error.
-%define pixel_ratio 1.0
+%define pixel_ratio 1.63
+
+%define have_modem 1
+Provides: ofono-configs
 
 %include droid-configs-device/droid-configs.inc
 
